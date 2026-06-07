@@ -1,0 +1,11 @@
+src/webapp/WEB-INF/db.properties
+
+.settings/
+
+build/
+bin/
+target/
+
+*.class
+
+Servers/
