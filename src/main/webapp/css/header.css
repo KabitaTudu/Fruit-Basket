@@ -1,0 +1,48 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+nav {
+	background-color: #0E6D4A;
+	height: 70px;
+	font-family: "Nunito", sans-serif;
+	font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    color: #C7C4E6;
+    box-shadow: 0px 5px 10px #3e454a;
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+a {
+	padding: 10px;
+	box-shadow: 0px 5px 10px #3e454a;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.left-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	
+	cursor: pointer;
+}
+
+.fruit-logo-img {
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 0px 5px 10px #3e454a;
+}
+
+.fruit-logo-title {
+	display: inline-block;
+}
