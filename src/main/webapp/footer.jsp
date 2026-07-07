@@ -8,6 +8,6 @@
 <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-	<p class="footer-content">Fruits Inc. copyright@2026</p>
+	<p class="footer-content">Fruit Basket Inc. copyright@2026</p>
 </body>
 </html>

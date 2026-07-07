@@ -1,6 +1,11 @@
 @charset "UTF-8";
 .footer-content {
+	font-family: "Nunito", sans-serif;
 	text-align: center;
-	color: rgba(0, 0, 0, 0.5);
+	color: #8e8987;
 	font-size: 12px;
+	padding: 10px;
+	background-color: #0E6D4A;
+	height: 40px;
+	box-shadow: 0px -5px 10px #3e454a;
 }
