@@ -17,12 +17,12 @@
 		<div class="hero-section">
 			<img src="images/logos/fruits-img1.jpg" class="basket-fruit-img">
 			<img src="images/logos/fruits-img2.jpg" class="basket-fruit-img">
-			<img src="images/logos/fruits-img7.jpg" class="basket-fruit-img">
+			<img src="images/logos/fruits-img3.jpg" class="basket-fruit-img">
 			<img src="images/logos/fruits-img4.jpg" class="basket-fruit-img">
 			<img src="images/logos/fruits-img5.jpg" class="basket-fruit-img">
 			<div class="sign-in-msg">
 				Sign In to add fruits to basket<br>
-				<a class="sign-in-btn">Sign In</a><br><br>
+				<a class="sign-in-btn" href="signIn.jsp">Sign In</a><br><br>
 				<img src="images/logos/basket-fruits.jpg" class="basket-fruit-img img-last">
 			</div>
 		</div>

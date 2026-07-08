@@ -26,6 +26,8 @@ a {
 	box-shadow: 0px 5px 10px #3e454a;
 	border-radius: 8px;
 	cursor: pointer;
+	text-decoration: none;
+	color: inherit;
 }
 
 .left-section {

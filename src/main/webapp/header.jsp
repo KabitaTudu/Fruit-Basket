@@ -15,8 +15,8 @@
 		</div>
 		<div class="right-section">
 			<a>About</a>
-			<a>Sign Up</a>
-			<a>Sign In</a>
+			<a href="signUp.jsp">Sign Up</a>
+			<a href="signIn.jsp">Sign In</a>
 		</div>
 	</nav>
 </body>
