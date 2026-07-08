@@ -16,10 +16,12 @@ public class DBConnection {
 			Properties props = new Properties();
 			
 			InputStream input = DBConnection.class.getClassLoader().getResourceAsStream("db.properties");
-			System.out.println("print: " + input);
+			
 			if (input == null) {
 				throw new RuntimeException("db.properties not found");
 			}
+			
+			props.load(input);
 			
 			url = props.getProperty("db.url");
 			username = props.getProperty("db.username");
