@@ -20,3 +20,15 @@ function validateSignUp() {
 	
 	return true;
 }
+
+function validateSignIn() {
+	const username = document.getElementById("js-username").value.trim();
+	const password = document.getElementById("js-password").value.trim();
+	
+	if (!username || !password) {
+		alert("You must provide a username and a password to sign in.");
+		return false;
+	}
+	
+	return true;
+}
