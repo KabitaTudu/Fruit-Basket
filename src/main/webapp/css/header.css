@@ -48,3 +48,11 @@ a {
 .fruit-logo-title {
 	display: inline-block;
 }
+
+#span-quantity {
+	margin-left: -5px;
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: #4b4805;
+	border-radius: 50%;
+}

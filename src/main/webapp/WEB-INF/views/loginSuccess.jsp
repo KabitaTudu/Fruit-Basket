@@ -10,6 +10,6 @@
 </head>
 <body>
 	<p>Login Success!</p>
-	<a href="<c:url value='/main' />">Go to Home</a>
+	<a href="<c:url value='/app/main' />">Go to Home</a>
 </body>
 </html>
