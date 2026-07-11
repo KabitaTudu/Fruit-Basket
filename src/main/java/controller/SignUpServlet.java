@@ -12,8 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 import model.User;
 import util.PasswordUtil;
 
-@WebServlet("/SignUpServlet")
+@WebServlet("/signup")
 public class SignUpServlet extends HttpServlet {
+	@Override
+	protected void doGet(
+			HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("/WEB-INF/views/signUp.jsp").forward(request, response);
+	}
 
     @Override
     protected void doPost(
@@ -38,9 +44,9 @@ public class SignUpServlet extends HttpServlet {
         boolean success = dao.signup(user);
 
         if (success) {
-            response.sendRedirect("success.jsp");
+        	request.getRequestDispatcher("/WEB-INF/views/success.jsp").forward(request, response);
         } else {
-            response.sendRedirect("home.jsp");
+        	request.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);
         }
 
     }

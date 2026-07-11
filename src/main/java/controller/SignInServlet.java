@@ -7,13 +7,21 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import util.PasswordUtil;
 import dao.UserDAO;
 import model.User;
 
-@WebServlet("/SignInServlet")
+@WebServlet("/signin")
 public class SignInServlet extends HttpServlet {
+	@Override
+	protected void doGet(
+			HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("/WEB-INF/views/signIn.jsp").forward(request, response);
+	}
+	
 	@Override
 	protected void doPost(
 			HttpServletRequest request,
@@ -26,9 +34,19 @@ public class SignInServlet extends HttpServlet {
 		User user = dao.findByUsername(username);
 		
 		if (user != null && PasswordUtil.verify(password, user.getPasswordHash())) {
-			response.sendRedirect("loginSuccess.jsp");
+			// create session
+			HttpSession oldSession = request.getSession(false);
+			if (oldSession != null) {
+				oldSession.invalidate();
+			}
+			
+			HttpSession session = request.getSession(true);
+			
+			session.setAttribute("username", user.getUsername());
+			
+			request.getRequestDispatcher("/WEB-INF/views/loginSuccess.jsp").forward(request, response);
 		} else {
-			response.sendRedirect("error.jsp");
+			request.getRequestDispatcher("/WEB-INF/views/error.jsp").forward(request, response);
 		}
 	}
 }

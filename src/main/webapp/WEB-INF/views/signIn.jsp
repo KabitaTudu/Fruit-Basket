@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +9,9 @@
 <title>Sign In | Fruit Basket Inc.</title>
 </head>
 <body>
-	<%@include file="header.jsp" %>
+	<jsp:include page="/WEB-INF/views/header.jsp" />
 	
-	<form method="post" action="SignInServlet" onsubmit="return validateSignIn()">
+	<form method="post" action="${pageContext.request.contextPath}/signin" onsubmit="return validateSignIn()">
 		<fieldset>
 			<legend>Sign In</legend>
 			<div>
@@ -24,8 +26,8 @@
 		</fieldset>
 	</form>
 	
-	<%@include file="footer.jsp" %>
+	<jsp:include page="/WEB-INF/views/footer.jsp" />
 	
-	<script src="js/validation.js"></script>
+	<script src="<c:url value='/js/validation.js' />"></script>
 </body>
 </html>

@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Footer</title>
-<link rel="stylesheet" href="css/footer.css">
+<title>Fruit Basket | Keep your fruits inventory</title>
 </head>
 <body>
-	<p class="footer-content">Fruit Basket Inc. copyright@2026</p>
+	<jsp:include page="/WEB-INF/views/mainHeader.jsp" />
+	
+	<jsp:include page="/WEB-INF/views/footer.jsp" />
 </body>
 </html>
