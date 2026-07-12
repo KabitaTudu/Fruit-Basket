@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body {
+	background-color: #C7C4E6;
+}
+
+.fruits-section {
+	min-height: 651px;
+}
+
+.fruit-card {
+	background-color: #16a972;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 20px;
+	box-shadow: 5px 5px 8px #313131;
+	
+	display: inline-block;
+}
+
+.fruit-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.fruit-form img {
+	border-radius: 8px;
+	box-shadow: 5px 5px 8px #313131;
+}
+
+.fruit-name, .fruit-price {
+	cursor: default;
+}
+
+.submit-btn {
+	border: none;
+	background-color: green;
+	color: white;
+	font-weight: 700;
+	padding: 10px;
+	border-radius: 8px;
+	color: #ccdbd3;
+}

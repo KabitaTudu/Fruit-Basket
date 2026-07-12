@@ -26,6 +26,24 @@ public class BasketDAO {
 		}
 	}
 	
+	public boolean updateBasket(Basket basket, int updatedCounter) {
+		try {
+			Connection conn = DBConnection.getConnection();
+			
+			String sql = "UPDATE basket set counter=? WHERE b_user_id=?;";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, updatedCounter);
+			ps.setString(2, basket.getBUserId());
+			int rows = ps.executeUpdate();
+			
+			conn.close();
+			return rows > 0;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
 	public Basket findBasket(String bUserId) {
 		Basket basket = null;
 		
@@ -42,6 +60,7 @@ public class BasketDAO {
 				
 				basket.setBUserId(rs.getString("b_user_id"));
 				basket.setCounter(rs.getInt("counter"));
+				basket.setCapacity(rs.getInt("capacity"));
 			}
 			
 			rs.close();
@@ -51,5 +70,13 @@ public class BasketDAO {
 		}
 		
 		return basket;
+	}
+	
+	public boolean isBasketFull(String bUserId, Basket basket, int quantityAdded) {
+		if (basket.getCounter() + quantityAdded > basket.getCapacity()) {
+			return true;
+		}
+		
+		return false;
 	}
 }

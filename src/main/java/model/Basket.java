@@ -20,6 +20,10 @@ public class Basket {
 		return capacity;
 	}
 	
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
+	}
+	
 	public int getCounter() {
 		return counter;
 	}
